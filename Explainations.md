@@ -1,5 +1,5 @@
 
-// Explainations
+## Explainations
 
 vartype: (temp, server, global) This is the variable type
 
