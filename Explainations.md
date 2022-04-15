@@ -9,6 +9,8 @@ type: member, message, user whatever
 
 vardesc: This will be a small description about your variable
 
+# Copy Paste
+
 ```js
 <script>
     // Function to create a new variable in dbs
