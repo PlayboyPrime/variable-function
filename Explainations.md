@@ -1,4 +1,4 @@
-```js
+
 // Explainations
 
 vartype: (temp, server, global) This is the variable type
@@ -9,7 +9,7 @@ type: member, message, user whatever
 
 vardesc: This will be a small description about your variable
 
-
+```js
 <script>
     // Function to create a new variable in dbs
     function newVar(vartype, varname, type, vardisplay) {
