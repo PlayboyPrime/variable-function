@@ -6,7 +6,7 @@ varname: Name of your variable
 
 type: member, row, number, string, channel, emoji, guild, message, role, user, buttoninteraction, selectinteraction, commandinteraction
 
-|Type|Explain|
+|Type|Representation|
 |----|-------|
 |guild|Represents a Guild|
 |channel|Represents a Channel|
