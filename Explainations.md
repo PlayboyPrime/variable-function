@@ -37,11 +37,11 @@ id: Id of variable is not already existing. This id is used to find the variable
 <script>
     $(document).on("click", "#saveEditResponseBtn", function(e) {
         if(e.target.parentElement.parentElement.children[0].children[0].innerHTML.includes(this.name)){
-            varnameid = "varname"
-            vartypeid = "vartype"
+            varnameid = ""
+            vartypeid = ""
             type = ""
             vardesc = ""
-            varid = "id"
+            varid = ""
         
             //ignore
             vartype = document.getElementById(vartypeid).value
