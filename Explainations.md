@@ -67,3 +67,92 @@ id: Id of variable. This id is used to find the variable and replace on change. 
 
 # Example Mod
 
+```js
+module.exports = {
+    // Set this to the name of the mod. This is what will be shown inside of Discord Bot Studio.
+    // THIS FILE NAME MUST BE THIS VALUE WITH SPACES REMOVED
+    name: "VarExample",
+
+    // Place the author of the mod here. This is an array so you can add other authors by writing ["Great Plains Modding", "New User"]
+    author: ["PlayboyPrime#3839"],
+
+    // Place the version of the mod here.
+    version: "1.0.0",
+
+    // Whenever you make a change, please place the changelog here with your name. Created Send Message ~ Great Plains Modding\n
+    changelog: "",
+
+    // Set this to true if this will be an event.
+    isEvent: false,
+    
+    isResponse: true,
+
+    // Set this to true if this will be a response mod.
+    isMod: true,
+
+    // If you want to modify a core feature, set this to true.
+    isAddon: false,
+
+    // Here you can define where you want your mod to show up inside of Discord Bot Studio
+    section: "Message",
+  
+    // Place your html to show inside of Discord Bot Studio when they select your mod.
+    html: function(data) {
+        return `
+        <div class="form-group">
+            <label>Variable Name *</label>
+            <input class="form-control needed-field" id="varname" name="varname">
+            <div class="form-group">
+                <label>Variable Type *</label>
+                <select class="form-control" id="vartype" name="vartype">
+                    <option value="temp" selected>Temp Variable</option>
+                    <option value="server">Server Variable</option>
+                    <option value="global">Global Variable</option>
+                </select>
+            </div>
+        </div>
+
+        <script>
+            $(document).on("click", "#saveEditResponseBtn", function(e) {
+                if(e.target === this){
+                    varnameid = "varname"
+                    vartypeid = "vartype"
+                    type = "guild"
+                    vardesc = "desc"
+                    varid = "VarModVar1"
+                
+                    //ignore
+                    vartype = document.getElementById(vartypeid).value
+                    varname = document.getElementById(varnameid).value
+                
+                    VarMod(vartype, varname, type, vardesc, varid)
+                }
+            })
+            function VarMod(vartype, varname, type, vardesc, id) {
+                if(vartype && varname && type && vardesc && id) {} else { return alert("[VarMod] Missing parameters") }
+                
+                if(document.getElementById(id)){
+                    document.getElementById(id).remove()
+                }
+                var newLiHtml =
+                    '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
+                newLiHtml +=
+                    "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardesc + " mod variable</li>";
+                $("#UserVariableList").append(newLiHtml);
+            }
+        </script>
+        `;
+    },
+
+    // When the bot is first started, this code will be ran.
+    init: function() {
+        console.log("Loaded VarExample");
+    },
+    
+    // Place your mod here.
+    mod: function(DBS, message, action, args, command, index) {
+        
+        DBS.callNextAction(command, message, args, index + 1);
+    }
+};
+```
