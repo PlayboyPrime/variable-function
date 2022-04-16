@@ -32,17 +32,14 @@ vardesc: This will be a small description about your variable
         if(e.target.parentNode.parentElement.children[0].children[0].innerHTML.includes(this.name)){
             varname = document.getElementById("varname").value
             vartype = document.getElementById("vartype").value
-        
             newVar(vartype, varname, "emoji", "This variable is from the TestMod", "something")
         }
     })
-    
     function newVar(vartype, varname, type, vardisplay, id) {
         if(vartype && varname && type && vardisplay && id) {} else { return alert("[newVar] Missing parameters") }
         if(document.getElementById(id)){
             document.getElementById(id).remove()
         }
-    
         var newLiHtml =
             '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
         newLiHtml +=
