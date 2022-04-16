@@ -28,19 +28,26 @@ vardesc: This will be a small description about your variable
 
 ```js
 <script>
-    // Function to create a new variable in dbs
-    function newVar(vartype, varname, type, vardisplay) {
-        // Remove if already exists
-        if(myVar){
-            myVar.remove()
-       }
-
-       var newLiHtml =
-           '<li class="list-group-item py-0" vartype="' + type + '">';
-       newLiHtml +=
-           "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardisplay + " mod variable</li>";
-       var myvar = $("#UserVariableList").append(newLiHtml);
+    $(document).on("click", "#saveEditResponseBtn", function(e) {
+        if(e.target.parentNode.parentElement.children[0].children[0].innerHTML.includes(this.name)){
+            varname = document.getElementById("varname").value
+            vartype = document.getElementById("vartype").value
+        
+            newVar(vartype, varname, "emoji", "This variable is from the TestMod", "something")
+        }
+    })
     
+    function newVar(vartype, varname, type, vardisplay, id) {
+        if(vartype && varname && type && vardisplay && id) {} else { return alert("[newVar] Missing parameters") }
+        if(document.getElementById(id)){
+            document.getElementById(id).remove()
+        }
+    
+        var newLiHtml =
+            '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
+        newLiHtml +=
+            "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardisplay + " mod variable</li>";
+        $("#UserVariableList").append(newLiHtml);
     }
 </script>
 ```
