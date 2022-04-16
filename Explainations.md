@@ -65,7 +65,7 @@ id: Id of variable. This id is used to find the variable and replace on change. 
 </script>
 ```
 
-# Example Mod
+# Example Mod wtih this function
 
 ```js
 module.exports = {
@@ -118,7 +118,7 @@ module.exports = {
                     varnameid = "varname"
                     vartypeid = "vartype"
                     type = "guild"
-                    vardesc = "desc"
+                    vardesc = "This variable is sus"
                     varid = "VarModVar1"
                 
                     //ignore
