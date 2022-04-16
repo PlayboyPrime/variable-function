@@ -56,10 +56,8 @@ id: Id of variable. This id is used to find the variable and replace on change. 
         if(document.getElementById(id)){
             document.getElementById(id).remove()
         }
-        var newLiHtml =
-            '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
-        newLiHtml +=
-            "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardesc + " mod variable</li>";
+        var newLiHtml = '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
+        newLiHtml += "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardesc + " mod variable</li>";
         $("#UserVariableList").append(newLiHtml);
     }
 </script>
@@ -134,10 +132,8 @@ module.exports = {
                 if(document.getElementById(id)){
                     document.getElementById(id).remove()
                 }
-                var newLiHtml =
-                    '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
-                newLiHtml +=
-                    "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardesc + " mod variable</li>";
+                var newLiHtml = '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
+                newLiHtml += "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardesc + " mod variable</li>";
                 $("#UserVariableList").append(newLiHtml);
             }
         </script>
