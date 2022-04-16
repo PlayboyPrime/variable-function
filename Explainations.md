@@ -1,10 +1,10 @@
 # Explainations
 
-## vartype: id of vartype select.
+## varselectid: Id of vartype select.
 
-## varname: id of varname input.
+## varnameid: Id of varname input.
 
-## type: 
+## type: This will be the variable type. 
 
 |Type|Representation|
 |----|-------|
