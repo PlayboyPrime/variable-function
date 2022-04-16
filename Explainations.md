@@ -37,11 +37,11 @@ id: Id of variable. This id is used to find the variable and replace on change. 
 <script>
     $(document).on("click", "#saveEditResponseBtn", function(e) {
         if(e.target === this){
-            varnameid = "varname"
-            vartypeid = "vartype"
-            type = "guild"
-            vardesc = "desc"
-            varid = "VarModVar1"
+            varnameid = ""
+            vartypeid = ""
+            type = ""
+            vardesc = ""
+            varid = ""
         
             //ignore
             vartype = document.getElementById(vartypeid).value
