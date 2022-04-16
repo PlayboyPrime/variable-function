@@ -47,11 +47,11 @@ id: Id of variable is not already existing. This id is used to find the variable
             vartype = document.getElementById(vartypeid).value
             varname = document.getElementById(varnameid).value
         
-            newVar(vartype, varname, type, vardesc, varid)
+            VarMod(vartype, varname, type, vardesc, varid)
         }
     })
-    function newVar(vartype, varname, type, vardisplay, id) {
-        if(vartype && varname && type && vardisplay && id) {} else { return alert("[newVar] Missing parameters") }
+    function VarMod(vartype, varname, type, vardisplay, id) {
+        if(vartype && varname && type && vardisplay && id) {} else { return alert("[VarMod] Missing parameters") }
         if(document.getElementById(id)){
             document.getElementById(id).remove()
         }
