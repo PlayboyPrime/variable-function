@@ -1,10 +1,10 @@
 # Explainations
 
-vartype: (temp, server, global) This is the variable type
+## vartype: ```temp, server, global``` This is the variable type.
 
-varname: Name of your variable
+## varname: Name of your variable.
 
-type: member, row, number, string, channel, emoji, guild, message, role, user, buttoninteraction, selectinteraction, commandinteraction
+## type: 
 
 |Type|Representation|
 |----|-------|
