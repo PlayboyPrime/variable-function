@@ -26,7 +26,7 @@ vardesc: This will be a small description about your variable
 
 ## Copypaste this under the html of your mod.
 
-```js
+```html
 <script>
     $(document).on("click", "#saveEditResponseBtn", function(e) {
         if(e.target.parentNode.parentElement.children[0].children[0].innerHTML.includes(this.name)){
