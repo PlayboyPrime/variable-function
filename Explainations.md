@@ -4,7 +4,23 @@ vartype: (temp, server, global) This is the variable type
 
 varname: Name of your variable
 
-type: member, message, user whatever
+type: member, row, number, string, channel, emoji, guild, message, role, user, buttoninteraction, selectinteraction, commandinteraction
+
+|Type|Explain|
+|----|-------|
+|guild|Represents a Guild|
+|channel|Represents a Channel|
+|message|Represents a Message|
+|role|Represents a Role|
+|member|Represents a GuildMember|
+|user|Represents a User|
+|buttoninteraction|Represents a ButtonInteraction|
+|selectinteraction|Represents a SelectInteraction|
+|commandinteraction|Represents a CommandInteraction|
+|string|Represents a String|
+|number|Represents a Number|
+|emoji|Represents a Emoji|
+|row|Represents a Row|
 
 vardesc: This will be a small description about your variable
 
