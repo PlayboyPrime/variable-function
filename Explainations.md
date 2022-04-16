@@ -29,10 +29,13 @@ vardesc: This will be a small description about your variable
 ```html
 <script>
     $(document).on("click", "#saveEditResponseBtn", function(e) {
-        if(e.target.parentNode.parentElement.children[0].children[0].innerHTML.includes(this.name)){
+        if(e.target.parentElement.parentElement.children[0].children[0].innerHTML.includes(this.name)){
             varname = document.getElementById("varname").value
             vartype = document.getElementById("vartype").value
-            newVar(vartype, varname, "emoji", "This variable is from the TestMod", "something")
+            type = "member"
+            vardesc = "This variable is sus"
+            varid = "id"
+            newVar(vartype, varname, type, vardesc, varid)
         }
     })
     function newVar(vartype, varname, type, vardisplay, id) {
