@@ -47,11 +47,11 @@ id: Id of variable. This id is used to find the variable and replace on change. 
             vartype = document.getElementById(vartypeid).value
             varname = document.getElementById(varnameid).value
         
-            VarMod(vartype, varname, type, vardesc, varid)
+            varFunc(vartype, varname, type, vardesc, varid)
         }
     })
-    function VarMod(vartype, varname, type, vardesc, id) {
-        if(vartype && varname && type && vardesc && id) {} else { return alert("[VarMod] Missing parameters") }
+    function varFunc(vartype, varname, type, vardesc, id) {
+        if(vartype && varname && type && vardesc && id) {} else { return alert("[varFunc] Missing parameters") }
         
         if(document.getElementById(id)){
             document.getElementById(id).remove()
@@ -119,17 +119,17 @@ module.exports = {
                     vartypeid = "vartype"
                     type = "guild"
                     vardesc = "This variable is sus"
-                    varid = "VarModVar1"
+                    varid = "VarExampleVar1"
                 
                     //ignore
                     vartype = document.getElementById(vartypeid).value
                     varname = document.getElementById(varnameid).value
                 
-                    VarMod(vartype, varname, type, vardesc, varid)
+                    varFunc(vartype, varname, type, vardesc, varid)
                 }
             })
-            function VarMod(vartype, varname, type, vardesc, id) {
-                if(vartype && varname && type && vardesc && id) {} else { return alert("[VarMod] Missing parameters") }
+            function varFunc(vartype, varname, type, vardesc, id) {
+                if(vartype && varname && type && vardesc && id) {} else { return alert("[varFunc] Missing parameters") }
                 
                 if(document.getElementById(id)){
                     document.getElementById(id).remove()
