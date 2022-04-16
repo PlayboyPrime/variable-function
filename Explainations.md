@@ -22,16 +22,16 @@
 |emoji|Represents a Emoji|
 |row|Represents a Row|
 
-vardesc: This will be a small description about your variable.
+## vardesc: This will be a small description about your variable.
 
-id: Id of variable. This id is used to find the variable and replace on change. Recomended to use mod name(Ex. MyModNameVar1)
+## id: Id of variable. This id is used to find the variable and replace on change. Recomended to use mod name(Ex. MyModNameVar1)
 
-## Picture
+# Picture
 
 ![image](https://user-images.githubusercontent.com/55946112/163659511-81458107-8d09-4377-978c-3c845be61e5e.png)
 
 
-## Copypaste this under the html of your mod.
+# Copypaste this under the html of your mod.
 
 ```html
 <script>
