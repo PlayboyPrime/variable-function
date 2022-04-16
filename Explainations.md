@@ -24,7 +24,7 @@ type: member, row, number, string, channel, emoji, guild, message, role, user, b
 
 vardesc: This will be a small description about your variable
 
-# Copy Paste
+## Copypaste this under the html of your mod.
 
 ```js
 <script>
