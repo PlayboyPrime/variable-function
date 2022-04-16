@@ -36,12 +36,12 @@ id: Id of variable. This id is used to find the variable and replace on change. 
 ```html
 <script>
     $(document).on("click", "#saveEditResponseBtn", function(e) {
-        if(e.target.parentElement.parentElement.children[0].children[0].innerHTML.includes(this.name)){
-            varnameid = ""
-            vartypeid = ""
-            type = ""
-            vardesc = ""
-            varid = ""
+        if(e.target === this){
+            varnameid = "varname"
+            vartypeid = "vartype"
+            type = "guild"
+            vardesc = "desc"
+            varid = "VarModVar1"
         
             //ignore
             vartype = document.getElementById(vartypeid).value
@@ -50,15 +50,16 @@ id: Id of variable. This id is used to find the variable and replace on change. 
             VarMod(vartype, varname, type, vardesc, varid)
         }
     })
-    function VarMod(vartype, varname, type, vardisplay, id) {
-        if(vartype && varname && type && vardisplay && id) {} else { return alert("[VarMod] Missing parameters") }
+    function VarMod(vartype, varname, type, vardesc, id) {
+        if(vartype && varname && type && vardesc && id) {} else { return alert("[VarMod] Missing parameters") }
+        
         if(document.getElementById(id)){
             document.getElementById(id).remove()
         }
         var newLiHtml =
             '<li id="' + id + '"' + 'class="list-group-item py-0" vartype="' + type + '">';
         newLiHtml +=
-            "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardisplay + " mod variable</li>";
+            "<strong>" + vartype + "Vars." + varname + "</strong> - " + vardesc + " mod variable</li>";
         $("#UserVariableList").append(newLiHtml);
     }
 </script>
