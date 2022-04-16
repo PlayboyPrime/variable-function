@@ -24,7 +24,7 @@
 
 vardesc: This will be a small description about your variable.
 
-id: Id of variable is not already existing. This id is used to find the variable and replace on change. Recomended to use mod name(Ex. MyModVar1)
+id: Id of variable. This id is used to find the variable and replace on change. Recomended to use mod name(Ex. MyModNameVar1)
 
 ## Picture
 
