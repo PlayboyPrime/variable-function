@@ -1,8 +1,8 @@
 # Explainations
 
-## vartype: ```temp, server, global``` This is the variable type.
+## vartype: id of vartype select.
 
-## varname: Name of your variable.
+## varname: id of varname input.
 
 ## type: 
 
@@ -37,15 +37,15 @@ id: Id of variable is not already existing. This id is used to find the variable
 <script>
     $(document).on("click", "#saveEditResponseBtn", function(e) {
         if(e.target.parentElement.parentElement.children[0].children[0].innerHTML.includes(this.name)){
-            varname = document.getElementById("varname").value
-            vartype = document.getElementById("vartype").value
+            varname = "varname"
+            vartype = "vartype"
             type = ""
             vardesc = ""
             varid = "id"
             newVar(vartype, varname, type, vardesc, varid)
         }
     })
-    function newVar(vartype, varname, type, vardisplay, id) {
+    function newVar(document.getElementById(vartype).value, document.getElementById(varname).value, type, vardisplay, id) {
         if(vartype && varname && type && vardisplay && id) {} else { return alert("[newVar] Missing parameters") }
         if(document.getElementById(id)){
             document.getElementById(id).remove()
@@ -58,3 +58,6 @@ id: Id of variable is not already existing. This id is used to find the variable
     }
 </script>
 ```
+
+# Example Mod
+
